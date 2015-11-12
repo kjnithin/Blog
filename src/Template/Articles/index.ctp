@@ -1,6 +1,7 @@
-<!-- File: src/Template/Articles/index.ctp -->
-
 <h1>Blog articles</h1>
+
+<?= $this->Html->link('Add Article', ['action' => 'add']) ?>
+
 <table>
     <tr>
         <th>Id</th>
@@ -20,14 +21,13 @@
             <?= $article->created->format(DATE_RFC850) ?>
         </td>
         <td>
-            <?=$this->Html->link('Edit',('action'=>'edit', $article ->id))?>
+            <?= $this->Html->link('Edit', ['action' => 'edit', $article->id]) ?>
             <?= $this->Form->postLink(
                 'Delete',
-                ['action'=>'delete', $article->id],
-                ['confirm'=>'Are you sure?'])
-             ?>
+                ['action' => 'delete', $article->id],
+                ['confirm' => 'Are you sure?'])
+            ?>
         </td>
     </tr>
     <?php endforeach; ?>
-    <?=$this->Html->link('Add Article',['action'=>'add'])?>
 </table>
