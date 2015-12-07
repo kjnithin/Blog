@@ -18,7 +18,9 @@ class ArticlesTable extends Table
             ->notEmpty('title')
             ->requirePresence('title')
             ->notEmpty('body')
-            ->requirePresence('body');
+            ->requirePresence('body')
+            ->notEmpty('comments')
+            ->requirePresence('comments');
 
         return $validator;
     }
