@@ -17,15 +17,12 @@ class ArticlesTable extends Table
         $this->hasMany('Comments',[
             'className' => 'Comments',
             'foreignKey' => 'article_id',
-            //            'conditions' => ['isApproved' => false],
-
             'dependent' => true]);
 
         $this->hasMany('ApprovedComments', [
              'className' => 'Comments',
             'conditions' => ['isApproved' => true],
                         'foreignKey' => 'article_id',
-
             'propertyName'=> 'approved_comments'
 
           ]);
