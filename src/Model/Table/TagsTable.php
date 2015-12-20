@@ -1,5 +1,5 @@
 <?php
-// src/Model/Table/ArticlesTable.php
+
 
 namespace App\Model\Table;
 
@@ -22,10 +22,5 @@ class TagsTable extends Table
 
     }
 }
-
-/**
-* 
-*/
-
 
 ?>
