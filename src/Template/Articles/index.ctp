@@ -3,7 +3,7 @@
 
 <div class="row">
 
-    <div class="col-md-1">
+    <div >
     </div>
 
     <div class="col-md-10">
@@ -59,7 +59,6 @@
 
                         </td>
                         <td>
-                           <!-- <?= debug($article->tags) ?> -->
                             <?= $article->author->username ?>
                         </td>
                         <td>
@@ -69,7 +68,6 @@
                             <?=  $this->Html->link('View', ['action' => 'view', $article->id]); ?>
 
                         <?php
-                            //$user = $this->request->session()->read('Auth.User');
                             if($user['role'] == 'admin')
                             {
 

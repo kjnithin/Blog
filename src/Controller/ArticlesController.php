@@ -60,8 +60,6 @@ class ArticlesController extends AppController
                 'associated' => 'Tags'
             ]);
 
-            // debug($entity);
-
             if($this->Articles->save($entity)){
                   $this->Flash->success(__('Article has been saved.'));
                 return $this->redirect(['action' => 'index']);
@@ -104,22 +102,12 @@ class ArticlesController extends AppController
         $this->set('allTags', $this->Tags->find('all'));  
 
         $article = $this->Articles->get($id, ['contain' => ['Comments', 'ApprovedComments', 'Users', 'Tags']]);
-//debug($this->Articles->Tags);
-        
-        //$this->request->allowMethod(['post', 'put']);
 
         if($this->request->is(['post', 'put'])){
-
-
-
-            //debug($article);
-            //debug($this->request->data);
 
             $entity = $this->Articles->patchEntity($article, $this->request->data, [
                 'associated' => ['Tags', 'Comments', 'ApprovedComments']
             ]);
-
-           //debug($entity);
 
             if($this->Articles->save($entity)){
                   $this->Flash->success(__('Article has been saved.'));
@@ -147,20 +135,7 @@ class ArticlesController extends AppController
 
      public function approve($id = null, $articleId = null)
     {
-    /*    $this->request->allowMethod(['post']);
-
-        $comment = $this->comments->get($id);
-        $comment['isApproved'] = true;
-
-
-        if($this->Comments->save($comment)){
-            $this->Flash->success(__('The comment has been approved'));
-            return $this->redirect(['arction'] => 'edit', '$articleid')
-        }
-        else{
-            $this->Flash->error(__('The comment could not be approved, Please try again'));
-        }
-    */
+   
     }
 }
 

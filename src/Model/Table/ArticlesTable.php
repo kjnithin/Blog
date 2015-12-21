@@ -39,10 +39,7 @@ class ArticlesTable extends Table
 
 
         $this->belongsToMany('Tags', [
-            //'foreignKey' => 'article_id',
-            //'targetForeignKey' => 'tag_id',
             'joinTable' => 'article_tag_relation'
-            //'propertyName' => 'tags'
         ]);
     }
 

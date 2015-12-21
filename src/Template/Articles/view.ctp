@@ -43,10 +43,6 @@
                    echo  $this->Form->textarea('comment', ['class' => 'form-control', 'id' => 'comment']); 
                    
                    echo $this->Form->button(__('Add New Comment'), ['class' => 'btn btn-md btn-info form-control']); 
-                   //echo "<input type='button' id='submitBtn' class='btn btn-primary btn-lg btn-block'/>";
-
-                   
-
                    echo $this->Form->end();
                 }
         ?>

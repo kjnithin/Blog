@@ -13,10 +13,9 @@
 
 
 <div class="row" >
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
-        <div class="panel panel-info">
+   
+    <div >
+        <div class="col-sm-9">
              <div class="panel-heading">
                  <h4 class="panel-title"><B>New Article</B></h4>
              </div>
